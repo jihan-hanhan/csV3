@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://deww587657lw5"]
 
-[node name="Control" type="Control" unique_id=1936176566]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[ext_resource type="PackedScene" uid="uid://bppwm2yb43bck" path="res://assets/textures/hexball.glb" id="1_17v5d"]
+[ext_resource type="PackedScene" uid="uid://bnqlxr8nkhj5" path="res://assets/textures/hex.glb" id="2_8rk43"]
+
+[node name="Node3D" type="Node3D" unique_id=162923151]
+
+[node name="hexball" parent="." unique_id=472726352 instance=ExtResource("1_17v5d")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=775583198]
+transform = Transform3D(0.71216106, 0.2715515, -0.6473689, 0.0051129614, 0.920126, 0.3915895, 0.70199764, -0.28218472, 0.6538894, -4.740685, 2.2218423, 5.3543963)
+keep_aspect = 0
+
+[node name="hex" parent="." unique_id=1600789958 instance=ExtResource("2_8rk43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04064989, 0, 3.6170633)
