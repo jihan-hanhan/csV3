@@ -1,15 +1,65 @@
 [gd_scene format=3 uid="uid://deww587657lw5"]
 
-[ext_resource type="PackedScene" uid="uid://bppwm2yb43bck" path="res://assets/textures/hexball.glb" id="1_17v5d"]
-[ext_resource type="PackedScene" uid="uid://bnqlxr8nkhj5" path="res://assets/textures/hex.glb" id="2_8rk43"]
+[ext_resource type="PackedScene" uid="uid://ckc5a7t08epgd" path="res://assets/textures/test-hex-u.glb" id="1_17v5d"]
+[ext_resource type="FontFile" uid="uid://b7y6tvrajbopk" path="res://assets/fonts/Knucklehead FREE.otf" id="2_8rk43"]
+
+[sub_resource type="Sky" id="Sky_17v5d"]
+
+[sub_resource type="Environment" id="Environment_8rk43"]
+background_mode = 2
+sky = SubResource("Sky_17v5d")
+glow_enabled = true
+glow_strength = 1.5
+glow_bloom = 0.16
+glow_hdr_threshold = 0.6
+fog_enabled = true
+fog_light_color = Color(0.22716, 0.11880001, 0.27, 1)
+fog_light_energy = 0.1
+fog_sky_affect = 0.3
+
+[sub_resource type="LabelSettings" id="LabelSettings_17v5d"]
+font = ExtResource("2_8rk43")
+font_size = 100
 
 [node name="Node3D" type="Node3D" unique_id=162923151]
 
-[node name="hexball" parent="." unique_id=472726352 instance=ExtResource("1_17v5d")]
+[node name="test-hex-u" parent="." unique_id=2074681006 instance=ExtResource("1_17v5d")]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=775583198]
-transform = Transform3D(0.71216106, 0.2715515, -0.6473689, 0.0051129614, 0.920126, 0.3915895, 0.70199764, -0.28218472, 0.6538894, -4.740685, 2.2218423, 5.3543963)
-keep_aspect = 0
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1166251539]
+transform = Transform3D(-0.7710452, 0.55184436, -0.31773746, 0.16151474, 0.65214175, 0.74069166, 0.61595637, 0.51978755, -0.5919618, -16.121845, 16, -15)
 
-[node name="hex" parent="." unique_id=1600789958 instance=ExtResource("2_8rk43")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04064989, 0, 3.6170633)
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1638614851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.18489, 0, 21.367485)
+light_color = Color(1, 1, 0.8392157, 1)
+light_energy = 16.0
+light_size = 1.0
+omni_range = 40.785
+omni_attenuation = 0.8
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=60449884]
+environment = SubResource("Environment_8rk43")
+
+[node name="Label" type="Label" parent="." unique_id=1123309036]
+offset_left = 768.0
+offset_top = 8.0
+offset_right = 1280.0
+offset_bottom = 285.0
+text = "GAME
+        TITLE"
+label_settings = SubResource("LabelSettings_17v5d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=961714274]
+offset_left = 8.0
+offset_top = 656.0
+offset_right = 120.0
+offset_bottom = 712.0
+
+[node name="Label2" type="Label" parent="Panel" unique_id=398029556]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 96.0
+offset_bottom = 49.0
+text = "studio
+  game ver"
