@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://deww587657lw5"]
 
-[ext_resource type="PackedScene" uid="uid://ckc5a7t08epgd" path="res://assets/textures/test-hex-u.glb" id="1_17v5d"]
+[ext_resource type="PackedScene" uid="uid://ckc5a7t08epgd" path="res://assets/textures/planet_1.glb" id="1_17v5d"]
+[ext_resource type="Script" uid="uid://b7nuysq0tbg7t" path="res://assets/textures/test_hex_u-rotation.gd" id="2_3ri2q"]
 [ext_resource type="FontFile" uid="uid://b7y6tvrajbopk" path="res://assets/fonts/Knucklehead FREE.otf" id="2_8rk43"]
 
 [sub_resource type="Sky" id="Sky_17v5d"]
@@ -23,18 +24,19 @@ font_size = 100
 
 [node name="Node3D" type="Node3D" unique_id=162923151]
 
-[node name="test-hex-u" parent="." unique_id=2074681006 instance=ExtResource("1_17v5d")]
+[node name="planet1" parent="." unique_id=524690741 instance=ExtResource("1_17v5d")]
+script = ExtResource("2_3ri2q")
+RotateSpeed = 0.1
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1166251539]
 transform = Transform3D(-0.7710452, 0.55184436, -0.31773746, 0.16151474, 0.65214175, 0.74069166, 0.61595637, 0.51978755, -0.5919618, -16.121845, 16, -15)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1638614851]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.18489, 0, 21.367485)
-light_color = Color(1, 1, 0.8392157, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.36522, 0, 63.367485)
+light_color = Color(1, 1, 0.88, 1)
 light_energy = 16.0
-light_size = 1.0
-omni_range = 40.785
-omni_attenuation = 0.8
+omni_range = 130.89
+omni_attenuation = 0.65
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=60449884]
 environment = SubResource("Environment_8rk43")
