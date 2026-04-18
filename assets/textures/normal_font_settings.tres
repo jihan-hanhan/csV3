@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://b11bb873xaqhw"]
+
+[ext_resource type="FontFile" uid="uid://b7y6tvrajbopk" path="res://assets/fonts/Knucklehead FREE.otf" id="1_vr02s"]
+
+[resource]
+line_spacing = 1.0
+font = ExtResource("1_vr02s")
+font_size = 26

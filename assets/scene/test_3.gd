@@ -8,9 +8,6 @@ func _ready() -> void:
 func test2() -> void:
 	self.visible = true
 
-func _pressed() -> void:
-	self.visible = false
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
