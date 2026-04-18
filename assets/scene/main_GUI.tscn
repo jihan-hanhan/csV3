@@ -11,6 +11,12 @@
 [ext_resource type="Script" uid="uid://4m46xvin2tst" path="res://assets/scene/panel-test1.gd" id="8_8q8xn"]
 [ext_resource type="LabelSettings" uid="uid://b11bb873xaqhw" path="res://assets/textures/normal_font_settings.tres" id="8_met71"]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8q8xn"]
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_met71"]
+size = Vector2(10, 10)
+
 [sub_resource type="Sky" id="Sky_17v5d"]
 
 [sub_resource type="Environment" id="Environment_8rk43"]
@@ -41,6 +47,14 @@ script = ExtResource("4_ynf4q")
 orbit_radius = 25.0
 orbit_speed = 0.05
 inclination_deg = 80.0
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="planet_2" unique_id=1661046876]
+amount = 10
+lifetime = 20.0
+speed_scale = 0.0
+collision_base_size = 0.0
+process_material = SubResource("ParticleProcessMaterial_8q8xn")
+draw_pass_1 = SubResource("QuadMesh_met71")
 
 [node name="sun" parent="." unique_id=1369737302 instance=ExtResource("6_a5dt7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 72)
