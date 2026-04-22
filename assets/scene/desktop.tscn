@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bkgnm2cbcwh3r"]
+
+[ext_resource type="Script" uid="uid://cvprwl2226u22" path="res://scripts/corners.gd" id="1_dwxbg"]
+[ext_resource type="Script" uid="uid://c6jyvfmuac3h2" path="res://scripts/cursor.gd" id="1_xjvwu"]
+[ext_resource type="Texture2D" uid="uid://ckfpmtdb4bd7q" path="res://assets/textures/cursor/corner.png" id="3_urcns"]
+[ext_resource type="Texture2D" uid="uid://dti7ctere1ytu" path="res://assets/textures/cursor/center.png" id="4_m3ayx"]
+[ext_resource type="Script" uid="uid://b3hmm2g4rtsmi" path="res://scripts/center.gd" id="5_m3ayx"]
+[ext_resource type="Script" uid="uid://dtn6wld55mrhc" path="res://scripts/buttons.gd" id="6_bnjba"]
+
+[node name="Desktop" type="Node2D" unique_id=258158853]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=764045553]
+
+[node name="Cursor" type="Node" parent="." unique_id=1529832808]
+script = ExtResource("1_xjvwu")
+
+[node name="Corners" type="Sprite2D" parent="Cursor" unique_id=1792479919]
+script = ExtResource("1_dwxbg")
+
+[node name="L1" type="Sprite2D" parent="Cursor/Corners" unique_id=443891422]
+texture = ExtResource("3_urcns")
+
+[node name="L2" type="Sprite2D" parent="Cursor/Corners" unique_id=198915901]
+texture = ExtResource("3_urcns")
+flip_v = true
+
+[node name="R1" type="Sprite2D" parent="Cursor/Corners" unique_id=1052857758]
+texture = ExtResource("3_urcns")
+flip_h = true
+
+[node name="R2" type="Sprite2D" parent="Cursor/Corners" unique_id=1847160227]
+texture = ExtResource("3_urcns")
+flip_h = true
+flip_v = true
+
+[node name="Center" type="Sprite2D" parent="Cursor" unique_id=1320791106]
+texture = ExtResource("4_m3ayx")
+script = ExtResource("5_m3ayx")
+
+[node name="Buttons" type="Control" parent="." unique_id=267383212]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_bnjba")
+
+[node name="Button" type="Button" parent="Buttons" unique_id=1776494897]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 1.0
+offset_right = 395.0
+offset_bottom = 36.0
+text = "请输入文本"
+
+[node name="Button2" type="Button" parent="Buttons" unique_id=501584244]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 46.0
+offset_right = 395.0
+offset_bottom = 81.0
+text = "请输入文本"
+
+[connection signal="button_exited" from="Buttons" to="Cursor/Corners" method="_on_buttons_button_exited"]
+[connection signal="button_hovered" from="Buttons" to="Cursor/Corners" method="_on_buttons_button_hovered"]
