@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="test-program"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="uid://bkgnm2cbcwh3r"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
+;config/icon="res://icon.svg"
 
 [display]
 
