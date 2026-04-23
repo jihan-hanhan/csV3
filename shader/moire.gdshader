@@ -8,8 +8,8 @@ uniform float transparency : hint_range(0.0, 1.0) = 0.5;  // 添加透明度控�
 void fragment() {
     vec4 bg = texture(SCREEN_TEXTURE, SCREEN_UV);
     
-    float lines_a = sin(SCREEN_UV.x * 300.0);
-    float lines_b = sin(SCREEN_UV.x * 298.5);
+    float lines_a = sin(SCREEN_UV.x * 1200.0);
+    float lines_b = sin(SCREEN_UV.x * 1198.0);
     float moire = abs((lines_a + lines_b) * 0.5);
     
     vec3 final = bg.rgb * (1.0 - moire * intensity);

@@ -19,12 +19,17 @@ func _ready():
 
 func _on_progress_bar_stretch_finished() -> void:
 	self.text = "Connected."
-	await blink_twice()
+	await blink_twice(true)
 
 
 # 闪烁两次
-func blink_twice():
+func blink_twice(v: bool) -> void:
 	for i in range(4):
 		visible = !visible
 		await get_tree().create_timer(0.05).timeout
-	visible = true
+	visible = v
+
+
+func _on_invert_layer_slide_in_finished() -> void:
+	await get_tree().create_timer(0.5).timeout
+	blink_twice(false)

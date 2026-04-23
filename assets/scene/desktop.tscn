@@ -95,3 +95,6 @@ color = Color(1, 1, 1, 0)
 [connection signal="stretch_finished" from="ProgressBar" to="Circle" method="_on_progress_bar_stretch_finished"]
 [connection signal="stretch_finished" from="ProgressBar" to="Confirmed" method="_on_progress_bar_stretch_finished"]
 [connection signal="stretch_finished" from="ProgressBar" to="Shader/InvertLayer" method="_on_progress_bar_stretch_finished"]
+[connection signal="slide_in_finished" from="Shader/InvertLayer" to="ProgressBar" method="_on_invert_layer_slide_in_finished"]
+[connection signal="slide_in_finished" from="Shader/InvertLayer" to="Control/Label" method="_on_invert_layer_slide_in_finished"]
+[connection signal="slide_in_finished" from="Shader/InvertLayer" to="Confirmed" method="_on_invert_layer_slide_in_finished"]
