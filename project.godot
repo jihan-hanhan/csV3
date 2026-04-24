@@ -11,15 +11,23 @@ config_version=5
 [application]
 
 config/name="test-program"
+<<<<<<< HEAD
 run/main_scene="uid://deww587657lw5"
+=======
+run/main_scene="uid://bkgnm2cbcwh3r"
+>>>>>>> 8c6cd394e946b6b29dad2292189fe4b5ad245abc
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
 
 [display]
 
+<<<<<<< HEAD
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
+=======
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+>>>>>>> 8c6cd394e946b6b29dad2292189fe4b5ad245abc
 
 [physics]
 
@@ -27,6 +35,10 @@ window/stretch/mode="canvas_items"
 
 [rendering]
 
+<<<<<<< HEAD
 textures/canvas_textures/default_texture_filter=3
+=======
+textures/canvas_textures/default_texture_filter=0
+>>>>>>> 8c6cd394e946b6b29dad2292189fe4b5ad245abc
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"

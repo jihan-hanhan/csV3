@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bkgnm2cbcwh3r"]
+
+[ext_resource type="Script" uid="uid://dawt4rhlkr3pv" path="res://scripts/desktop/progress_bar.gd" id="2_au8ti"]
+[ext_resource type="Script" uid="uid://cis8grjodjnlm" path="res://scripts/desktop/label.gd" id="2_xjvwu"]
+[ext_resource type="Script" uid="uid://ny7jnqxeo6mu" path="res://scripts/desktop/circle.gd" id="3_au8ti"]
+[ext_resource type="Shader" uid="uid://b4lru1k6rp5hf" path="res://shader/moire.gdshader" id="4_urcns"]
+[ext_resource type="Texture2D" uid="uid://d34o88682636m" path="res://assets/textures/confirmed.png" id="5_m3ayx"]
+[ext_resource type="Script" uid="uid://c3koguq0yn10v" path="res://scripts/desktop/confirmed.gd" id="6_bnjba"]
+[ext_resource type="Shader" uid="uid://h4ql2m7gnke5" path="res://shader/invert.gdshader" id="6_cq84g"]
+[ext_resource type="Script" uid="uid://bt0cbfhdlrqkp" path="res://scripts/desktop/invert_layer.gd" id="7_cq84g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_buj0j"]
+shader = ExtResource("6_cq84g")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m3ayx"]
+shader = ExtResource("4_urcns")
+shader_parameter/intensity = 0.3
+shader_parameter/transparency = 0.400000019
+
+[node name="Desktop" type="Node2D" unique_id=300535499]
+
+[node name="ProgressBar" type="ColorRect" parent="." unique_id=621203961]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_au8ti")
+
+[node name="L" type="ColorRect" parent="ProgressBar" unique_id=1762074370]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="R" type="ColorRect" parent="ProgressBar" unique_id=824810542]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="." unique_id=2124046360]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1983.0
+offset_bottom = 1139.0
+
+[node name="Label" type="Label" parent="Control" unique_id=1835195288]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_xjvwu")
+
+[node name="Circle" type="Line2D" parent="." unique_id=147211675]
+script = ExtResource("3_au8ti")
+
+[node name="Confirmed" type="Sprite2D" parent="." unique_id=1405409381]
+position = Vector2(210.00006, 127.00006)
+scale = Vector2(0.21289063, 0.21289063)
+texture = ExtResource("5_m3ayx")
+script = ExtResource("6_bnjba")
+
+[node name="Shader" type="Node" parent="." unique_id=1857415758]
+
+[node name="InvertLayer" type="CanvasLayer" parent="Shader" unique_id=340459746]
+script = ExtResource("7_cq84g")
+
+[node name="InvertShader" type="ColorRect" parent="Shader/InvertLayer" unique_id=1241245465]
+material = SubResource("ShaderMaterial_buj0j")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="MoireLayer" type="CanvasLayer" parent="Shader" unique_id=916940575]
+
+[node name="MoireShader" type="ColorRect" parent="Shader/MoireLayer" unique_id=149474076]
+material = SubResource("ShaderMaterial_m3ayx")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="stretch_finished" from="ProgressBar" to="Control/Label" method="_on_progress_bar_stretch_finished"]
+[connection signal="stretch_finished" from="ProgressBar" to="Circle" method="_on_progress_bar_stretch_finished"]
+[connection signal="stretch_finished" from="ProgressBar" to="Confirmed" method="_on_progress_bar_stretch_finished"]
+[connection signal="stretch_finished" from="ProgressBar" to="Shader/InvertLayer" method="_on_progress_bar_stretch_finished"]
+[connection signal="slide_in_finished" from="Shader/InvertLayer" to="ProgressBar" method="_on_invert_layer_slide_in_finished"]
+[connection signal="slide_in_finished" from="Shader/InvertLayer" to="Control/Label" method="_on_invert_layer_slide_in_finished"]
+[connection signal="slide_in_finished" from="Shader/InvertLayer" to="Confirmed" method="_on_invert_layer_slide_in_finished"]
