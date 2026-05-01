@@ -16,3 +16,4 @@ func slide_in():
 	tween.tween_property(self, "offset", Vector2(0, 0), 0.3).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 	# 入场完成，发信号
 	tween.finished.connect(func(): slide_in_finished.emit())
+	

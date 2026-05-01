@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://deww587657lw5"]
 
-[ext_resource type="PackedScene" uid="uid://ckc5a7t08epgd" path="res://assets/textures/planet_1.glb" id="1_17v5d"]
+[ext_resource type="PackedScene" uid="uid://ckc5a7t08epgd" path="res://assets/textures/main_GUI/planet_1.glb" id="1_17v5d"]
 [ext_resource type="Script" uid="uid://b7nuysq0tbg7t" path="res://scripts/mian_GUI/test_hex_u-rotation.gd" id="2_3ri2q"]
 [ext_resource type="FontFile" uid="uid://b7y6tvrajbopk" path="res://assets/fonts/Knucklehead FREE.otf" id="2_8rk43"]
-[ext_resource type="PackedScene" uid="uid://d3jua45r5bblp" path="res://assets/textures/planet_2.glb" id="4_s7hb5"]
+[ext_resource type="PackedScene" uid="uid://d3jua45r5bblp" path="res://assets/textures/main_GUI/planet_2.glb" id="4_s7hb5"]
 [ext_resource type="Script" uid="uid://bgk8q4uo4r0i0" path="res://scripts/mian_GUI/planet_2.gd" id="4_ynf4q"]
 [ext_resource type="Script" uid="uid://opomrrex0h4o" path="res://scripts/mian_GUI/mian-camera.gd" id="6_2oywd"]
-[ext_resource type="PackedScene" uid="uid://d211ocb0oqxig" path="res://assets/textures/sun.glb" id="6_a5dt7"]
+[ext_resource type="PackedScene" uid="uid://d211ocb0oqxig" path="res://assets/textures/main_GUI/sun.glb" id="6_a5dt7"]
 [ext_resource type="Script" uid="uid://4m46xvin2tst" path="res://scripts/mian_GUI/panel-test1.gd" id="8_8q8xn"]
-[ext_resource type="LabelSettings" uid="uid://b11bb873xaqhw" path="res://assets/textures/normal_font_settings.tres" id="8_met71"]
+[ext_resource type="LabelSettings" uid="uid://b11bb873xaqhw" path="res://assets/textures/main_GUI/normal_font_settings.tres" id="8_met71"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8q8xn"]
 gravity = Vector3(0, 0, 0)
