@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://bl5hqucy2a3ci"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oir5s"]
+bg_color = Color(0.96, 0.96, 0.96, 0.7058824)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 1
+shadow_offset = Vector2(0, 1)
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxFlat_oir5s")

@@ -1,19 +1,39 @@
 [gd_scene format=3 uid="uid://bdlh7htn6h0kc"]
 
 [ext_resource type="Script" uid="uid://bvdui2w5de86u" path="res://scripts/main/item_panel.gd" id="1_n21ud"]
+[ext_resource type="Shader" uid="uid://78yvk4mjrcm" path="res://scripts/main/panel.gdshader" id="1_oir5s"]
 [ext_resource type="Script" uid="uid://bihagro38am12" path="res://scripts/main/panel_items_control.gd" id="2_5prhe"]
 [ext_resource type="FontFile" uid="uid://btqujsg7ssyuc" path="res://assets/fonts/HarmonyOS_Sans_SC_Black.ttf" id="2_c1amp"]
+[ext_resource type="Theme" uid="uid://bl5hqucy2a3ci" path="res://scripts/main/new_theme.tres" id="2_rawc5"]
 [ext_resource type="Script" uid="uid://dmb6m5se68rmy" path="res://scripts/main/item_bar.gd" id="2_rwa88"]
-[ext_resource type="Texture2D" uid="uid://bowi46d3klbqa" path="res://assets/textures/weight_bar.png" id="3_c1amp"]
+[ext_resource type="Texture2D" uid="uid://bowi46d3klbqa" path="res://assets/textures/main/weight_bar.png" id="3_c1amp"]
 [ext_resource type="Script" uid="uid://hopmw533i1j1" path="res://scripts/main/bar_white.gd" id="4_5prhe"]
 [ext_resource type="Script" uid="uid://r4ciqpgryk3p" path="res://scripts/main/bar_color.gd" id="5_oir5s"]
+[ext_resource type="Texture2D" uid="uid://dmjr4lu320u5f" path="res://assets/textures/main/test_bg_1.jpg" id="6_5prhe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rawc5"]
+shader = ExtResource("1_oir5s")
 
 [sub_resource type="LabelSettings" id="LabelSettings_5prhe"]
 font = ExtResource("2_c1amp")
 font_size = 55
+font_color = Color(0.05882353, 0.05882353, 0.05882353, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_oir5s"]
 font_size = 76
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5prhe"]
+bg_color = Color(0.9411765, 0.9411765, 0.9411765, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.4392157)
+shadow_size = 1
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="Theme" id="Theme_oir5s"]
+Panel/styles/panel = SubResource("StyleBoxFlat_5prhe")
 
 [node name="Node2D" type="Node2D" unique_id=2146355740]
 
@@ -21,14 +41,17 @@ font_size = 76
 size = Vector2i(1280, 720)
 
 [node name="item_panel" type="Panel" parent="." unique_id=1901830549]
+material = SubResource("ShaderMaterial_rawc5")
 offset_left = 368.0
 offset_top = 24.0
-offset_right = 1152.0
+offset_right = 1160.0
 offset_bottom = 536.0
+theme = ExtResource("2_rawc5")
 script = ExtResource("1_n21ud")
 slide_speed = 0.3
 
 [node name="button_1" type="Control" parent="item_panel" unique_id=1148016530]
+visible = false
 anchors_preset = 0
 offset_right = 784.0
 offset_bottom = 512.0
@@ -95,9 +118,10 @@ offset_bottom = 136.0
 text = "44444444444444444444444444444444444444444444444444444444444444444444"
 
 [node name="button_x" type="Control" parent="item_panel" unique_id=1787225522]
+visible = false
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 784.0
+offset_bottom = 512.0
 script = ExtResource("2_5prhe")
 
 [node name="item_bar" type="Node2D" parent="." unique_id=2001080006]
@@ -152,6 +176,17 @@ offset_right = 1136.0
 offset_bottom = 632.0
 text = "第一个按钮
 "
+
+[node name="bg_t" type="CanvasLayer" parent="." unique_id=1476134754]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="bg_t" unique_id=1228547973]
+offset_left = -208.0
+offset_top = -136.0
+offset_right = 1242.6666
+offset_bottom = 680.0
+theme = SubResource("Theme_oir5s")
+texture = ExtResource("6_5prhe")
 
 [node name="bar_white" type="CanvasLayer" parent="." unique_id=13576376]
 layer = -1
