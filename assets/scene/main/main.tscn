@@ -1,26 +1,102 @@
 [gd_scene format=3 uid="uid://bdlh7htn6h0kc"]
 
-[ext_resource type="Script" uid="uid://dmb6m5se68rmy" path="res://scripts/main/item_bar.gd" id="1_0vk0l"]
-[ext_resource type="Texture2D" uid="uid://bowi46d3klbqa" path="res://assets/textures/weight_bar.png" id="1_821e4"]
-[ext_resource type="Script" uid="uid://bvdui2w5de86u" path="res://scripts/main/panel.gd" id="1_uu0fw"]
-[ext_resource type="Script" uid="uid://hopmw533i1j1" path="res://scripts/main/bar_white.gd" id="2_0nmyk"]
-[ext_resource type="Script" uid="uid://r4ciqpgryk3p" path="res://scripts/main/bar_color.gd" id="2_tb8ar"]
+[ext_resource type="Script" uid="uid://bvdui2w5de86u" path="res://scripts/main/item_panel.gd" id="1_n21ud"]
+[ext_resource type="Script" uid="uid://bihagro38am12" path="res://scripts/main/panel_items_control.gd" id="2_5prhe"]
+[ext_resource type="FontFile" uid="uid://btqujsg7ssyuc" path="res://assets/fonts/HarmonyOS_Sans_SC_Black.ttf" id="2_c1amp"]
+[ext_resource type="Script" uid="uid://dmb6m5se68rmy" path="res://scripts/main/item_bar.gd" id="2_rwa88"]
+[ext_resource type="Texture2D" uid="uid://bowi46d3klbqa" path="res://assets/textures/weight_bar.png" id="3_c1amp"]
+[ext_resource type="Script" uid="uid://hopmw533i1j1" path="res://scripts/main/bar_white.gd" id="4_5prhe"]
+[ext_resource type="Script" uid="uid://r4ciqpgryk3p" path="res://scripts/main/bar_color.gd" id="5_oir5s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5prhe"]
+font = ExtResource("2_c1amp")
+font_size = 55
+
+[sub_resource type="LabelSettings" id="LabelSettings_oir5s"]
+font_size = 76
 
 [node name="Node2D" type="Node2D" unique_id=2146355740]
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=290184910]
 size = Vector2i(1280, 720)
 
-[node name="Panel" type="Panel" parent="." unique_id=1901830549]
+[node name="item_panel" type="Panel" parent="." unique_id=1901830549]
 offset_left = 368.0
 offset_top = 24.0
 offset_right = 1152.0
 offset_bottom = 536.0
-script = ExtResource("1_uu0fw")
+script = ExtResource("1_n21ud")
 slide_speed = 0.3
 
+[node name="button_1" type="Control" parent="item_panel" unique_id=1148016530]
+visible = false
+anchors_preset = 0
+offset_right = 784.0
+offset_bottom = 512.0
+script = ExtResource("2_5prhe")
+
+[node name="Label" type="Label" parent="item_panel/button_1" unique_id=2035969027]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 768.0
+offset_bottom = 88.0
+text = "Button 1 AaBbCc 啊 !@#"
+label_settings = SubResource("LabelSettings_5prhe")
+
+[node name="HSeparator" type="HSeparator" parent="item_panel/button_1" unique_id=800775382]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 88.0
+offset_right = 768.0
+offset_bottom = 104.0
+
+[node name="button_2" type="Control" parent="item_panel" unique_id=1641197382]
+visible = false
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 56.0
+offset_bottom = 80.0
+script = ExtResource("2_5prhe")
+
+[node name="Label" type="Label" parent="item_panel/button_2" unique_id=2076135499]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "b2"
+label_settings = SubResource("LabelSettings_oir5s")
+
+[node name="button_3" type="Control" parent="item_panel" unique_id=160227253]
+visible = false
+anchors_preset = 0
+offset_right = 784.0
+offset_bottom = 512.0
+script = ExtResource("2_5prhe")
+
+[node name="Label" type="Label" parent="item_panel/button_3" unique_id=568081839]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "333333333333333333333333333333"
+
+[node name="button_4" type="Control" parent="item_panel" unique_id=1632220557]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_5prhe")
+
+[node name="Label" type="Label" parent="item_panel/button_4" unique_id=80160668]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 360.0
+offset_bottom = 136.0
+text = "44444444444444444444444444444444444444444444444444444444444444444444"
+
 [node name="item_bar" type="Node2D" parent="." unique_id=2001080006]
-script = ExtResource("1_0vk0l")
+script = ExtResource("2_rwa88")
 slide_speed = 0.5
 wait_time = 0.9
 
@@ -29,7 +105,7 @@ offset_left = 264.0
 offset_top = 560.0
 offset_right = 1152.0
 offset_bottom = 656.0
-texture = ExtResource("1_821e4")
+texture = ExtResource("3_c1amp")
 expand_mode = 2
 
 [node name="4" type="Button" parent="item_bar" unique_id=984068844]
@@ -66,7 +142,7 @@ text = "第一个按钮
 
 [node name="bar_white" type="CanvasLayer" parent="." unique_id=13576376]
 layer = -1
-script = ExtResource("2_0nmyk")
+script = ExtResource("4_5prhe")
 slide_speed = 0.2
 wait_time = 0.5
 
@@ -78,7 +154,7 @@ color = Color(0.9411765, 0.9411765, 0.9411765, 1)
 
 [node name="bar_color" type="CanvasLayer" parent="." unique_id=2039440212]
 layer = -1
-script = ExtResource("2_tb8ar")
+script = ExtResource("5_oir5s")
 slide_speed = 0.3
 wait_time = 0.3
 
@@ -88,7 +164,7 @@ offset_right = 1152.0
 offset_bottom = 656.0
 color = Color(0.256, 0.72746676, 0.8, 1)
 
-[connection signal="pressed" from="item_bar/4" to="Panel" method="_on_button_pressed" binds= [4]]
-[connection signal="pressed" from="item_bar/3" to="Panel" method="_on_button_pressed" binds= [3]]
-[connection signal="pressed" from="item_bar/2" to="Panel" method="_on_button_pressed" binds= [2]]
-[connection signal="pressed" from="item_bar/1" to="Panel" method="_on_button_pressed" binds= [1]]
+[connection signal="pressed" from="item_bar/4" to="item_panel" method="_on_button_pressed" binds= [4, NodePath("button_4")]]
+[connection signal="pressed" from="item_bar/3" to="item_panel" method="_on_button_pressed" binds= [3, NodePath("button_3")]]
+[connection signal="pressed" from="item_bar/2" to="item_panel" method="_on_button_pressed" binds= [2, NodePath("button_2")]]
+[connection signal="pressed" from="item_bar/1" to="item_panel" method="_on_button_pressed" binds= [1, NodePath("button_1")]]
