@@ -29,7 +29,6 @@ script = ExtResource("1_n21ud")
 slide_speed = 0.3
 
 [node name="button_1" type="Control" parent="item_panel" unique_id=1148016530]
-visible = false
 anchors_preset = 0
 offset_right = 784.0
 offset_bottom = 512.0
@@ -95,6 +94,12 @@ offset_right = 360.0
 offset_bottom = 136.0
 text = "44444444444444444444444444444444444444444444444444444444444444444444"
 
+[node name="button_x" type="Control" parent="item_panel" unique_id=1787225522]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_5prhe")
+
 [node name="item_bar" type="Node2D" parent="." unique_id=2001080006]
 script = ExtResource("2_rwa88")
 slide_speed = 0.5
@@ -107,6 +112,14 @@ offset_right = 1152.0
 offset_bottom = 656.0
 texture = ExtResource("3_c1amp")
 expand_mode = 2
+
+[node name="x" type="Button" parent="item_bar" unique_id=1982361889]
+offset_left = 368.0
+offset_top = 576.0
+offset_right = 424.0
+offset_bottom = 632.0
+text = "设置
+"
 
 [node name="4" type="Button" parent="item_bar" unique_id=984068844]
 offset_left = 672.0
@@ -164,6 +177,7 @@ offset_right = 1152.0
 offset_bottom = 656.0
 color = Color(0.256, 0.72746676, 0.8, 1)
 
+[connection signal="pressed" from="item_bar/x" to="item_panel" method="_on_button_pressed" binds= [10, NodePath("button_x")]]
 [connection signal="pressed" from="item_bar/4" to="item_panel" method="_on_button_pressed" binds= [4, NodePath("button_4")]]
 [connection signal="pressed" from="item_bar/3" to="item_panel" method="_on_button_pressed" binds= [3, NodePath("button_3")]]
 [connection signal="pressed" from="item_bar/2" to="item_panel" method="_on_button_pressed" binds= [2, NodePath("button_2")]]

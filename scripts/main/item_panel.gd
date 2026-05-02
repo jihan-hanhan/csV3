@@ -6,6 +6,8 @@ var is_pressed : bool = false
 var latest_Bnum : int = 0 #!!! button_num != 0 -> 0=>first_start
 var latest_weight : Node
 
+var button_lock : bool = false
+
 @onready var width = get_viewport().get_visible_rect().size.x
 @onready var hide_position = Vector2(width,normal_position.y)
 
@@ -36,6 +38,12 @@ func _on_button_pressed(button_num : int,path_weight:NodePath) -> void:
 #	print(button_num)
 #	print(latest_Bnum)
 #	print("+++++++")
+	
+	#防止连点出问题
+	if button_lock:
+		return
+	button_lock = true
+
 	var weight = get_node(path_weight)
 
 	is_pressed = not is_pressed #切换状态
@@ -63,6 +71,8 @@ func _on_button_pressed(button_num : int,path_weight:NodePath) -> void:
 		weight.self_hide()
 		
 	latest_weight = weight
+	
+	button_lock = false
 		
 #	print(is_pressed)
 #	print(button_num)
