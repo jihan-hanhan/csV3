@@ -81,6 +81,7 @@ grow_vertical = 2
 color = Color(1, 1, 1, 0)
 
 [node name="MoireLayer" type="CanvasLayer" parent="Shader" unique_id=916940575]
+visible = false
 
 [node name="MoireShader" type="ColorRect" parent="Shader/MoireLayer" unique_id=149474076]
 material = SubResource("ShaderMaterial_m3ayx")

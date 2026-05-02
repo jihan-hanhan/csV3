@@ -17,11 +17,43 @@ wait_time = 0.9
 
 [node name="bg" type="TextureRect" parent="item_bar" unique_id=856338759]
 offset_left = 264.0
-offset_top = 552.0
+offset_top = 560.0
 offset_right = 1152.0
-offset_bottom = 648.0
+offset_bottom = 656.0
 texture = ExtResource("1_821e4")
 expand_mode = 2
+
+[node name="4" type="Button" parent="item_bar" unique_id=984068844]
+offset_left = 672.0
+offset_top = 576.0
+offset_right = 728.0
+offset_bottom = 632.0
+text = "按钮
+"
+
+[node name="3" type="Button" parent="item_bar" unique_id=536546031]
+offset_left = 768.0
+offset_top = 576.0
+offset_right = 824.0
+offset_bottom = 632.0
+text = "按钮
+"
+
+[node name="2" type="Button" parent="item_bar" unique_id=590255166]
+offset_left = 864.0
+offset_top = 576.0
+offset_right = 920.0
+offset_bottom = 632.0
+text = "按钮
+"
+
+[node name="1" type="Button" parent="item_bar" unique_id=1727898257]
+offset_left = 960.0
+offset_top = 576.0
+offset_right = 1136.0
+offset_bottom = 632.0
+text = "第一个按钮
+"
 
 [node name="bar_white" type="CanvasLayer" parent="." unique_id=13576376]
 layer = -1
