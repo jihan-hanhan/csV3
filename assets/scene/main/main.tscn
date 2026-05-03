@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bowi46d3klbqa" path="res://assets/textures/main/weight_bar.png" id="3_c1amp"]
 [ext_resource type="Script" uid="uid://hopmw533i1j1" path="res://scripts/main/bar_white.gd" id="4_5prhe"]
 [ext_resource type="Script" uid="uid://r4ciqpgryk3p" path="res://scripts/main/bar_color.gd" id="5_oir5s"]
+[ext_resource type="PackedScene" uid="uid://bia6a16y5hecc" path="res://assets/scene/main/settings.tscn" id="6_5p0je"]
 [ext_resource type="Texture2D" uid="uid://dmjr4lu320u5f" path="res://assets/textures/main/test_bg_1.jpg" id="6_5prhe"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rawc5"]
@@ -36,9 +37,6 @@ shadow_offset = Vector2(0, 1)
 Panel/styles/panel = SubResource("StyleBoxFlat_5prhe")
 
 [node name="Node2D" type="Node2D" unique_id=2146355740]
-
-[node name="SubViewport" type="SubViewport" parent="." unique_id=290184910]
-size = Vector2i(1280, 720)
 
 [node name="item_panel" type="Panel" parent="." unique_id=1901830549]
 material = SubResource("ShaderMaterial_rawc5")
@@ -117,11 +115,21 @@ offset_right = 360.0
 offset_bottom = 136.0
 text = "44444444444444444444444444444444444444444444444444444444444444444444"
 
-[node name="button_x" type="Control" parent="item_panel" unique_id=1787225522]
-visible = false
-anchors_preset = 0
-offset_right = 784.0
-offset_bottom = 512.0
+[node name="SubViewportContainer" type="SubViewportContainer" parent="item_panel/button_4" unique_id=1788482207]
+layout_mode = 0
+offset_left = 288.00003
+offset_top = -7.999999
+offset_right = 1568.0
+offset_bottom = 712.0
+scale = Vector2(0.36896682, 0.69593716)
+
+[node name="SubViewport" type="SubViewport" parent="item_panel/button_4/SubViewportContainer" unique_id=290184910]
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 0
+
+[node name="button_x" parent="item_panel" unique_id=23826380 instance=ExtResource("6_5p0je")]
+layout_mode = 1
 script = ExtResource("2_5prhe")
 
 [node name="item_bar" type="Node2D" parent="." unique_id=2001080006]
@@ -179,6 +187,7 @@ text = "第一个按钮
 
 [node name="bg_t" type="CanvasLayer" parent="." unique_id=1476134754]
 layer = -1
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="bg_t" unique_id=1228547973]
 offset_left = -208.0
