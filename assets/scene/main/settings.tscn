@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bia6a16y5hecc"]
 
 [ext_resource type="Script" uid="uid://dnbi4ylim1oqa" path="res://scripts/main/settings_scripts/toggle_controler.gd" id="1_a857x"]
+[ext_resource type="Script" uid="uid://b68f8xet0yjn1" path="res://scripts/main/settings_scripts/item_show.gd" id="2_4nvgx"]
 [ext_resource type="FontFile" uid="uid://btqujsg7ssyuc" path="res://assets/fonts/HarmonyOS_Sans_SC_Black.ttf" id="2_d10rv"]
 [ext_resource type="FontFile" uid="uid://cx81c8uvecfqo" path="res://assets/fonts/HarmonyOS_Sans_SC_Light.ttf" id="3_4nvgx"]
 
@@ -49,9 +50,11 @@ offset_right = 760.0
 offset_bottom = 488.0
 
 [node name="info" type="Control" parent="items" unique_id=1534495811]
+visible = false
 anchors_preset = 0
 offset_right = 592.0
 offset_bottom = 464.0
+script = ExtResource("2_4nvgx")
 
 [node name="CenterContainer" type="CenterContainer" parent="items/info" unique_id=2040124388]
 layout_mode = 0
@@ -71,6 +74,27 @@ layout_mode = 2
 text = "制作组: 12th"
 label_settings = SubResource("LabelSettings_ifhxj")
 
+[node name="test" type="Control" parent="items" unique_id=1359181053]
+visible = false
+anchors_preset = 0
+offset_right = 592.0
+offset_bottom = 464.0
+script = ExtResource("2_4nvgx")
+
+[node name="Label" type="Label" parent="items/test" unique_id=1779599044]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "test 111111111111
+11111111
+11111111111
+11111111111
+1111111111111111111111111111111111111111111111
+
+
+
+1111"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=439417089]
 layout_mode = 1
 anchors_preset = -1
@@ -89,3 +113,10 @@ alignment = 1
 [node name="info" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=135491767]
 layout_mode = 2
 text = " Infomations "
+
+[node name="test" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=278544292]
+layout_mode = 2
+text = "control_T"
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/info" to="toggle_controler" method="toggle" binds= [1, NodePath("../items/info")]]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/test" to="toggle_controler" method="toggle" binds= [100, NodePath("../items/test")]]
