@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="test-program"
-run/main_scene="uid://bkgnm2cbcwh3r"
+run/main_scene="uid://bdlh7htn6h0kc"
 config/features=PackedStringArray("4.6", "Mobile")
 
 [display]
