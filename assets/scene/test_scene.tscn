@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dw2ujt43mqvlf"]
+
+[ext_resource type="Script" uid="uid://cisd54fkqnfl4" path="res://scripts/lib/textureable_button.gd" id="1_ro3m8"]
+[ext_resource type="Texture2D" uid="uid://d34o88682636m" path="res://assets/textures/confirmed.png" id="2_ro3m8"]
+
+[node name="Node2D" type="Node2D" unique_id=1646541767]
+
+[node name="textureable_button" type="Control" parent="." unique_id=1911595844]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 48.0
+offset_bottom = 32.0
+script = ExtResource("1_ro3m8")
+backguond_texture = ExtResource("2_ro3m8")
+metadata/_custom_type_script = "uid://cisd54fkqnfl4"
