@@ -5,8 +5,8 @@ extends Button
 
 func _ready():
 	binit("normal",normal_color)
-	binit("hover",normal_color.darkened(-0.1))
-	binit("pressed",normal_color.darkened(0.1))
+	binit("hover",normal_color.lerp(Color.WHITE,0.2))
+	binit("pressed",normal_color.lerp(Color.BLACK,0.1))
 	
 func binit(style_name:String,setcolor:Color):
 	var origin_style = self.get_theme_stylebox(style_name)
