@@ -1,7 +1,7 @@
 extends Button
 
 @export var normal_color : Color
-@export var border_light : float = 0.25
+@export var border_light : float = 0.31
 
 func _ready():
 	binit("normal",normal_color)
@@ -16,7 +16,7 @@ func binit(style_name:String,setcolor:Color):
 	style.border_width_top = 8
 	style.border_width_right = 8
 	style.border_width_bottom = 8 
-	style.border_color = setcolor.lightened(border_light)
+	style.border_color = setcolor.lerp(Color.WHITE,0.4)
 	style.corner_radius_top_left = 1024
 	style.corner_radius_top_right = 1024
 	style.corner_radius_bottom_left =1024
@@ -24,3 +24,4 @@ func binit(style_name:String,setcolor:Color):
 	style.corner_detail = int(self.size.y) / 10
 	
 	self.add_theme_stylebox_override(style_name,style)
+	

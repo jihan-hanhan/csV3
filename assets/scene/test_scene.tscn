@@ -32,4 +32,4 @@ offset_top = 24.0
 offset_right = 360.0
 offset_bottom = 72.0
 script = ExtResource("1_qrtb8")
-normal_color = Color(0.116199985, 0.83, 0.21137339, 1)
+normal_color = Color(0.11764706, 0.83137256, 0.21176471, 1)
