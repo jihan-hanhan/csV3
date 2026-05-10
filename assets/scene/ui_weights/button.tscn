@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://4vkxrtb1b1tf"]
+
+[ext_resource type="Script" uid="uid://cisd54fkqnfl4" path="res://scripts/lib/textureable_button.gd" id="1_xd4co"]
+[ext_resource type="Texture2D" uid="uid://d34o88682636m" path="res://assets/textures/confirmed.png" id="2_60ivt"]
+
+[node name="Button" type="Button" unique_id=1528917129]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_xd4co")
+bg_texture = ExtResource("2_60ivt")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1495366745]
+z_index = 4
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 5.0
+anchor_bottom = 5.0

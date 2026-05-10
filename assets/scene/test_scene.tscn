@@ -1,15 +1,35 @@
 [gd_scene format=3 uid="uid://dw2ujt43mqvlf"]
 
-[ext_resource type="Script" uid="uid://cisd54fkqnfl4" path="res://scripts/lib/textureable_button.gd" id="1_ro3m8"]
-[ext_resource type="Texture2D" uid="uid://d34o88682636m" path="res://assets/textures/confirmed.png" id="2_ro3m8"]
+[ext_resource type="Script" uid="uid://bquay53ldfwsx" path="res://scripts/lib/big_button.gd" id="1_qrtb8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djn7n"]
+
+[sub_resource type="Theme" id="Theme_djn7n"]
+Button/styles/normal = SubResource("StyleBoxFlat_djn7n")
 
 [node name="Node2D" type="Node2D" unique_id=1646541767]
 
-[node name="textureable_button" type="Control" parent="." unique_id=1911595844]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 48.0
-offset_bottom = 32.0
-script = ExtResource("1_ro3m8")
-backguond_texture = ExtResource("2_ro3m8")
-metadata/_custom_type_script = "uid://cisd54fkqnfl4"
+[node name="Button" type="Button" parent="." unique_id=15648455]
+offset_left = 112.0
+offset_top = 88.0
+offset_right = 672.0
+offset_bottom = 256.0
+theme = SubResource("Theme_djn7n")
+script = ExtResource("1_qrtb8")
+normal_color = Color(0.25490198, 0.7294118, 0.8, 1)
+
+[node name="Button2" type="Button" parent="." unique_id=173730094]
+offset_left = 736.0
+offset_top = 136.0
+offset_right = 952.0
+offset_bottom = 216.0
+script = ExtResource("1_qrtb8")
+normal_color = Color(0.724, 0.31, 1, 1)
+
+[node name="Button3" type="Button" parent="." unique_id=604788072]
+offset_left = 248.0
+offset_top = 24.0
+offset_right = 360.0
+offset_bottom = 72.0
+script = ExtResource("1_qrtb8")
+normal_color = Color(0.116199985, 0.83, 0.21137339, 1)
