@@ -50,6 +50,7 @@ theme = SubResource("Theme_djn7n")
 script = ExtResource("2_es588")
 normal_color = Color(0.25490198, 0.7294118, 0.8, 1)
 texts = "阿克戎"
+circle_times = 5
 
 [node name="Label" type="Label" parent="." unique_id=1745771486]
 unique_name_in_owner = true

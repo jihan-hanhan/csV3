@@ -5,6 +5,7 @@ extends Button
 
 @export_group("childrens")
 @export var texts:String
+@export var circle_times : int
 
 func _ready():
 	binit("normal",normal_color)
