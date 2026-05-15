@@ -1,3 +1,121 @@
 [gd_scene format=3 uid="uid://dw2ujt43mqvlf"]
 
+[ext_resource type="Script" uid="uid://djyudrpx6n35" path="res://scripts/lib/UIweights/FlatButton.gd" id="1_djn7n"]
+[ext_resource type="Texture2D" uid="uid://bshv0oydxbfwh" path="res://assets/textures/button_style1.png" id="2_ro3m8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ro3m8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.4, 0.4, 0.4, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qrtb8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.4, 0.4, 0.4, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jpva"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.52000004, 0.52000004, 0.52000004, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8oynj"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7720676, 0.5521168, 0.8596108, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.86324054, 0.7312701, 0.9157665, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_movh7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7720676, 0.5521168, 0.8596108, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.81691647, 0.69814306, 0.8641898, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44erc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7720676, 0.5521168, 0.8596108, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.89059246, 0.78501606, 0.9326132, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 20
+
 [node name="Node2D" type="Node2D" unique_id=1646541767]
+
+[node name="FlatButton" type="Button" parent="." unique_id=1405156229]
+offset_left = 216.0
+offset_top = 368.0
+offset_right = 916.0
+offset_bottom = 568.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro3m8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qrtb8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3jpva")
+script = ExtResource("1_djn7n")
+normal_color = Color(0.7720676, 0.5521168, 0.8596108, 1)
+texture = ExtResource("2_ro3m8")
+metadata/_custom_type_script = "uid://djyudrpx6n35"
+
+[node name="FlatButton2" type="Button" parent="." unique_id=2014005698]
+offset_left = 208.0
+offset_top = 72.0
+offset_right = 760.0
+offset_bottom = 216.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8oynj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_movh7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_44erc")
+script = ExtResource("1_djn7n")
+normal_color = Color(0.927643, 0.52796704, 0.39775673, 1)
+metadata/_custom_type_script = "uid://djyudrpx6n35"
