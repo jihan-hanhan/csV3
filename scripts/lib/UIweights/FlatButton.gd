@@ -13,7 +13,8 @@ class_name FlatButton
 @export_group("Texture")
 @export var texture : Texture2D
 
-
+var label = Label.new()
+var t = TextureRect.new()
 ##编辑器可见
 #func _init() -> void:
 #	if Engine.is_editor_hint():
@@ -23,10 +24,21 @@ class_name FlatButton
 
 func _ready():
 	if texture:
-		tinit(texts,fontfile)
-		pinit(texture)
+		tinit(label,texts,fontfile)
+		pinit(t,texture)
 	else:
-		tinit(texts,fontfile,false)
+		tinit(label,texts,fontfile,false)
+	
+	binit("normal",normal_color)
+	binit("hover",normal_color.lerp(Color.WHITE,0.2))
+	binit("pressed",normal_color.lerp(Color.BLACK,0.1))
+
+func refresh() -> void:
+	if texture:
+		tinit(label,texts,fontfile)
+		pinit(t,texture)
+	else:
+		tinit(label,texts,fontfile,false)
 	
 	binit("normal",normal_color)
 	binit("hover",normal_color.lerp(Color.WHITE,0.2))
@@ -54,8 +66,7 @@ func binit(style_name:String,setcolor:Color):
 	self.add_theme_stylebox_override(style_name,style)
 
 ##文本初始化
-func tinit(text:String,font:FontFile,is_texture:bool=true) -> void:
-	var label = Label.new()
+func tinit(label:Label,text:String,font:FontFile,is_texture:bool=true) -> void:
 	label.label_settings = LabelSettings.new()
 	
 	var fontset = label.label_settings
@@ -78,8 +89,7 @@ func tinit(text:String,font:FontFile,is_texture:bool=true) -> void:
 	add_child(label,true)
 
 ##贴图初始化
-func pinit(texture:Texture2D) ->void:
-	var t = TextureRect.new()
+func pinit(t:TextureRect,texture:Texture2D) ->void:
 	
 	t.texture = texture
 	t.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
@@ -90,5 +100,3 @@ func pinit(texture:Texture2D) ->void:
 	t.position.x = (self.size.y / 200) * 8 + self.size.x / 200
 	
 	add_child(t,true)
-	
-	

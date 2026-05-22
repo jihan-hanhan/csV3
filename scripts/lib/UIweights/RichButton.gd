@@ -4,11 +4,19 @@ class_name RichButton
 
 @export var normal_color : Color
 @export var corner_radius : int = 5
+@export var bg_texture : Texture2D = preload("uid://bbyv0730txqe6")
+@export var picture : Texture2D = preload("uid://bbyv0730txqe6")
+
+var border_size : int = (self.size.y / 200) * 8
+
+var bg = TextureRect.new()
+var pic = TextureRect.new()
+var label = Label.new()
 
 func _ready() -> void:
-	binit("normal",normal_color)
-	binit("hover",normal_color.lerp(Color.WHITE,0.2))
-	binit("pressed",normal_color.lerp(Color.BLACK,0.1))
+	bg_init()
+	pic_init()
+	pass
 
 #本体初始化	
 func binit(style_name:String,setcolor:Color):
@@ -16,7 +24,6 @@ func binit(style_name:String,setcolor:Color):
 	var style:StyleBoxFlat = origin_style.duplicate()
 	style.bg_color = normal_color
 	
-	var border_size : int = (self.size.y / 200) * 8
 	style.border_width_left = border_size
 	style.border_width_top = border_size
 	style.border_width_right = border_size
@@ -31,5 +38,17 @@ func binit(style_name:String,setcolor:Color):
 	
 	self.add_theme_stylebox_override(style_name,style)
 
-func tinit() -> void:
-	var t = Label.new()
+func bg_init() -> void:
+	#bg.position = self.position
+	bg.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	
+	bg.size.x = self.size.x
+	bg.size.y = self.size.y
+	bg.texture = bg_texture
+	add_child(bg)
+
+func pic_init() -> void:
+	pic.expand_mode
+	pic.texture = picture
+	
+	add_child(pic)
