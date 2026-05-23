@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://d1wvyukgx6o7p" path="res://scripts/lib/UIweights/RichButton.gd" id="3_qrtb8"]
 [ext_resource type="Script" uid="uid://n1hlwcsoilvw" path="res://scripts/lib/UIweights/MessageBar.gd" id="5_8oynj"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jpva"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8oynj"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -23,7 +23,7 @@ corner_radius_bottom_right = 1024
 corner_radius_bottom_left = 1024
 corner_detail = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8oynj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_movh7"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -40,7 +40,7 @@ corner_radius_bottom_right = 1024
 corner_radius_bottom_left = 1024
 corner_detail = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_movh7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44erc"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -57,56 +57,83 @@ corner_radius_bottom_right = 1024
 corner_radius_bottom_left = 1024
 corner_detail = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44erc"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.927643, 0.52796704, 0.39775673, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.9565858, 0.71678025, 0.63865405, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 14
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8hvi"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.927643, 0.52796704, 0.39775673, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.9009272, 0.6851022, 0.61478865, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 14
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.4, 0.4, 0.4, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktfo1"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.927643, 0.52796704, 0.39775673, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.9652687, 0.7734242, 0.71092325, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 14
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.4, 0.4, 0.4, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ch3ib"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.52000004, 0.52000004, 0.52000004, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4cd2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.4, 0.4, 0.4, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_biwaj"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.4, 0.4, 0.4, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pn2tw"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.52000004, 0.52000004, 0.52000004, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2410"]
 content_margin_left = 4.0
@@ -156,43 +183,46 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ch3ib"]
-corner_radius_top_left = 7
-corner_radius_top_right = 7
-corner_radius_bottom_right = 7
-corner_radius_bottom_left = 7
-
-[sub_resource type="Theme" id="Theme_r4cd2"]
-Panel/styles/panel = SubResource("StyleBoxFlat_ch3ib")
-
 [node name="Node2D" type="Node2D" unique_id=1646541767]
 
 [node name="FlatButton" type="Button" parent="." unique_id=1405156229]
-offset_left = 336.0
-offset_top = 368.0
-offset_right = 1036.0
-offset_bottom = 568.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_3jpva")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8oynj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_movh7")
+offset_left = 64.0
+offset_top = 512.0
+offset_right = 456.0
+offset_bottom = 624.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8oynj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_movh7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_44erc")
 script = ExtResource("1_djn7n")
 normal_color = Color(0.5504, 0.73616, 0.86, 1)
+texts = "info"
 texture = ExtResource("2_ro3m8")
 metadata/_custom_type_script = "uid://djyudrpx6n35"
 
-[node name="FlatButton2" type="Button" parent="." unique_id=2014005698]
-visible = false
-offset_left = 208.0
-offset_top = 72.0
-offset_right = 760.0
-offset_bottom = 216.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_44erc")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_k8hvi")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ktfo1")
+[node name="FlatButton3" type="Button" parent="." unique_id=688336848]
+offset_left = 520.0
+offset_top = 488.0
+offset_right = 912.0
+offset_bottom = 592.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_k8hvi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ktfo1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ch3ib")
 script = ExtResource("1_djn7n")
-normal_color = Color(0.927643, 0.52796704, 0.39775673, 1)
-corner_radius = 10
-texture = ExtResource("3_3jpva")
+normal_color = Color(0.95000005, 1, 0, 1)
+texts = "warn"
+metadata/_custom_type_script = "uid://djyudrpx6n35"
+
+[node name="FlatButton2" type="Button" parent="." unique_id=2066440344]
+offset_left = 752.0
+offset_top = 360.0
+offset_right = 1144.0
+offset_bottom = 488.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_r4cd2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_biwaj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pn2tw")
+script = ExtResource("1_djn7n")
+normal_color = Color(0.91, 0.21840002, 0.21840002, 1)
+texts = "error"
 metadata/_custom_type_script = "uid://djyudrpx6n35"
 
 [node name="RichButton" type="Button" parent="." unique_id=42010841]
@@ -211,13 +241,10 @@ metadata/_custom_type_script = "uid://d1wvyukgx6o7p"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=227801043]
 
-[node name="Panel" type="Panel" parent="." unique_id=1176274168]
-offset_left = 248.0
-offset_top = 8.0
-offset_right = 768.0
-offset_bottom = 48.0
-theme = SubResource("Theme_r4cd2")
-
 [node name="MessageBar" type="CanvasLayer" parent="." unique_id=968155229]
 script = ExtResource("5_8oynj")
 metadata/_custom_type_script = "uid://n1hlwcsoilvw"
+
+[connection signal="pressed" from="FlatButton" to="MessageBar" method="bar_create" binds= [0, "嗯对,一些信息"]]
+[connection signal="pressed" from="FlatButton3" to="MessageBar" method="bar_create" binds= [1, "嗯对,一点警告"]]
+[connection signal="pressed" from="FlatButton2" to="MessageBar" method="bar_create" binds= [2, "NullPointerException  孩子们这并不好笑"]]
