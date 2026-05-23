@@ -93,6 +93,7 @@ func pinit(t:TextureRect,texture:Texture2D) ->void:
 	
 	t.texture = texture
 	t.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	t.expand_mode = TextureRect.EXPAND_FIT_HEIGHT_PROPORTIONAL
 	
 	t.size.y = self.size.y
 	t.size.x = self.size.x * 0.5 - (self.size.y / 200) * 8 - self.size.x / 200
