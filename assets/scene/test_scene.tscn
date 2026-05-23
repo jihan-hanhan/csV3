@@ -4,18 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://bshv0oydxbfwh" path="res://assets/textures/button_style1.png" id="2_ro3m8"]
 [ext_resource type="Texture2D" uid="uid://bfm31br1vxfl6" path="res://assets/textures/button_style2.png" id="3_3jpva"]
 [ext_resource type="Script" uid="uid://d1wvyukgx6o7p" path="res://scripts/lib/UIweights/RichButton.gd" id="3_qrtb8"]
+[ext_resource type="Script" uid="uid://n1hlwcsoilvw" path="res://scripts/lib/UIweights/MessageBar.gd" id="5_8oynj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jpva"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.7720676, 0.5521168, 0.8596108, 1)
+bg_color = Color(0.5504, 0.73616, 0.86, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
-border_color = Color(0.86324054, 0.7312701, 0.9157665, 1)
+border_color = Color(0.73024, 0.84169596, 0.916, 1)
 corner_radius_top_left = 1024
 corner_radius_top_right = 1024
 corner_radius_bottom_right = 1024
@@ -27,12 +28,12 @@ content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.7720676, 0.5521168, 0.8596108, 1)
+bg_color = Color(0.5504, 0.73616, 0.86, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
-border_color = Color(0.81691647, 0.69814306, 0.8641898, 1)
+border_color = Color(0.69721603, 0.7975264, 0.86439997, 1)
 corner_radius_top_left = 1024
 corner_radius_top_right = 1024
 corner_radius_bottom_right = 1024
@@ -44,12 +45,12 @@ content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.7720676, 0.5521168, 0.8596108, 1)
+bg_color = Color(0.5504, 0.73616, 0.86, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
-border_color = Color(0.89059246, 0.78501606, 0.9326132, 1)
+border_color = Color(0.784192, 0.87335676, 0.9328, 1)
 corner_radius_top_left = 1024
 corner_radius_top_right = 1024
 corner_radius_bottom_right = 1024
@@ -155,6 +156,15 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ch3ib"]
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="Theme" id="Theme_r4cd2"]
+Panel/styles/panel = SubResource("StyleBoxFlat_ch3ib")
+
 [node name="Node2D" type="Node2D" unique_id=1646541767]
 
 [node name="FlatButton" type="Button" parent="." unique_id=1405156229]
@@ -171,6 +181,7 @@ texture = ExtResource("2_ro3m8")
 metadata/_custom_type_script = "uid://djyudrpx6n35"
 
 [node name="FlatButton2" type="Button" parent="." unique_id=2014005698]
+visible = false
 offset_left = 208.0
 offset_top = 72.0
 offset_right = 760.0
@@ -185,10 +196,11 @@ texture = ExtResource("3_3jpva")
 metadata/_custom_type_script = "uid://djyudrpx6n35"
 
 [node name="RichButton" type="Button" parent="." unique_id=42010841]
+visible = false
 offset_left = 360.0
 offset_top = 256.0
-offset_right = 624.0
-offset_bottom = 344.0
+offset_right = 848.0
+offset_bottom = 384.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_b2410")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_oo3cf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_k7xtu")
@@ -197,6 +209,15 @@ normal_color = Color(0.5588804, 0.7233833, 0.3203391, 1)
 bg_texture = ExtResource("3_3jpva")
 metadata/_custom_type_script = "uid://d1wvyukgx6o7p"
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1995683410]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=227801043]
+
+[node name="Panel" type="Panel" parent="." unique_id=1176274168]
+offset_left = 248.0
+offset_top = 8.0
+offset_right = 768.0
+offset_bottom = 48.0
+theme = SubResource("Theme_r4cd2")
+
+[node name="MessageBar" type="CanvasLayer" parent="." unique_id=968155229]
+script = ExtResource("5_8oynj")
+metadata/_custom_type_script = "uid://n1hlwcsoilvw"
