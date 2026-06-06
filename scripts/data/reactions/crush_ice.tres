@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ReactionData" format=3 uid="uid://d2k4u7xkjykb2"]
+
+[ext_resource type="Script" uid="uid://b4c2eej1hcpu8" path="res://data/script/data/effect_data.gd" id="1_yv1uj"]
+[ext_resource type="Script" uid="uid://c4dh642si372s" path="res://data/script/data/reaction_data.gd" id="2_02o73"]
+
+[resource]
+script = ExtResource("2_02o73")
+reaction_id = "crush_ice"
+reaction_name = "碎冰"
+description = "寒冷+物理=碎冰"
+attack_elements = Array[int]([1])
+target_elements = Array[int]([4])
+damage_multiplier = 3.0
+metadata/_custom_type_script = "uid://c4dh642si372s"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ReactionData" format=3 uid="uid://ctb8y06skrvpy"]
+
+[ext_resource type="Script" uid="uid://b4c2eej1hcpu8" path="res://data/script/data/effect_data.gd" id="1_36jam"]
+[ext_resource type="Script" uid="uid://c4dh642si372s" path="res://data/script/data/reaction_data.gd" id="2_yy5ko"]
+
+[resource]
+script = ExtResource("2_yy5ko")
+reaction_id = "intensify"
+reaction_name = "激化"
+description = "腐蚀+电磁=激化"
+attack_elements = Array[int]([8, 16])
+target_elements = Array[int]([16, 8])
+metadata/_custom_type_script = "uid://c4dh642si372s"

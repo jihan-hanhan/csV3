@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ReactionData" format=3 uid="uid://tmxckbsei0yo"]
+
+[ext_resource type="Script" uid="uid://b4c2eej1hcpu8" path="res://data/script/data/effect_data.gd" id="1_ovvv4"]
+[ext_resource type="Script" uid="uid://c4dh642si372s" path="res://data/script/data/reaction_data.gd" id="2_a0484"]
+
+[resource]
+script = ExtResource("2_a0484")
+reaction_id = "superconduction"
+reaction_name = "超导"
+description = "寒冷+电磁=超导"
+attack_elements = Array[int]([4, 8])
+target_elements = Array[int]([8, 4])
+metadata/_custom_type_script = "uid://c4dh642si372s"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ReactionData" format=3 uid="uid://gdmcpweqrxj2"]
+
+[ext_resource type="Script" uid="uid://b4c2eej1hcpu8" path="res://data/script/data/effect_data.gd" id="1_wsm7u"]
+[ext_resource type="Script" uid="uid://c4dh642si372s" path="res://data/script/data/reaction_data.gd" id="2_hwkpi"]
+
+[resource]
+script = ExtResource("2_hwkpi")
+reaction_id = "conduction"
+reaction_name = "传导"
+description = "物理+电磁=传导"
+attack_elements = Array[int]([1])
+target_elements = Array[int]([8])
+metadata/_custom_type_script = "uid://c4dh642si372s"

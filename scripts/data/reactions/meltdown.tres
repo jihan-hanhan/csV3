@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ReactionData" format=3 uid="uid://bjvx2wrlc6cuq"]
+
+[ext_resource type="Script" uid="uid://b4c2eej1hcpu8" path="res://data/script/data/effect_data.gd" id="1_o4cmp"]
+[ext_resource type="Script" uid="uid://c4dh642si372s" path="res://data/script/data/reaction_data.gd" id="2_ck6ml"]
+
+[resource]
+script = ExtResource("2_ck6ml")
+reaction_id = "meltdown"
+reaction_name = "熔毁"
+description = "电磁+灼热=熔毁"
+attack_elements = Array[int]([8, 2])
+target_elements = Array[int]([2, 8])
+metadata/_custom_type_script = "uid://c4dh642si372s"

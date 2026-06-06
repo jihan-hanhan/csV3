@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ReactionData" format=3 uid="uid://baipmdfklcgj7"]
+
+[ext_resource type="Script" uid="uid://b4c2eej1hcpu8" path="res://data/script/data/effect_data.gd" id="1_8axrq"]
+[ext_resource type="Script" uid="uid://c4dh642si372s" path="res://data/script/data/reaction_data.gd" id="2_qqeka"]
+
+[resource]
+script = ExtResource("2_qqeka")
+reaction_id = "corrode"
+reaction_name = "蚀骨"
+description = "物理+腐蚀=蚀骨"
+attack_elements = Array[int]([16])
+target_elements = Array[int]([1])
+metadata/_custom_type_script = "uid://c4dh642si372s"

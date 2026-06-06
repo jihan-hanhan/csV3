@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ReactionData" format=3 uid="uid://dcdv7wkcfaim3"]
+
+[ext_resource type="Script" uid="uid://b4c2eej1hcpu8" path="res://data/script/data/effect_data.gd" id="1_p7qrg"]
+[ext_resource type="Script" uid="uid://c4dh642si372s" path="res://data/script/data/reaction_data.gd" id="2_7cecu"]
+
+[resource]
+script = ExtResource("2_7cecu")
+reaction_id = "acid"
+reaction_name = "酸化"
+description = "寒冷+腐蚀=酸化"
+attack_elements = Array[int]([4, 16])
+target_elements = Array[int]([16, 4])
+metadata/_custom_type_script = "uid://c4dh642si372s"

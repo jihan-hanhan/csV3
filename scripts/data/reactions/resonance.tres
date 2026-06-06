@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ReactionData" format=3 uid="uid://dnxe243fa31jo"]
+
+[ext_resource type="Script" uid="uid://b4c2eej1hcpu8" path="res://data/script/data/effect_data.gd" id="1_u21wo"]
+[ext_resource type="Script" uid="uid://c4dh642si372s" path="res://data/script/data/reaction_data.gd" id="2_6pgvh"]
+
+[resource]
+script = ExtResource("2_6pgvh")
+reaction_id = "resonance"
+reaction_name = "共振"
+description = "1"
+attack_elements = Array[int]([32])
+target_elements = Array[int]([1, 2, 4, 8, 16])
+metadata/_custom_type_script = "uid://c4dh642si372s"
