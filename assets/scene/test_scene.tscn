@@ -273,6 +273,7 @@ offset_bottom = 552.0
 
 [node name="MessageBar" type="CanvasLayer" parent="." unique_id=968155229]
 script = ExtResource("5_8oynj")
+font_size = 11
 metadata/_custom_type_script = "uid://n1hlwcsoilvw"
 
 [connection signal="pressed" from="FlatButton" to="MessageBar" method="bar_create" binds= [0, "嗯对,一些信息"]]
